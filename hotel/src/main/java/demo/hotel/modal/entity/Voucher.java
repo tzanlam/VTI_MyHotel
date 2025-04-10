@@ -20,7 +20,7 @@ public class Voucher extends Time{
     private String name;
 
     @Column
-    private String amount;
+    private int amount;
 
     @Column
     private int point;
