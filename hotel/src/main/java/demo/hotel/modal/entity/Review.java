@@ -15,7 +15,15 @@ public class Review extends Time{
 
     @ManyToOne
     @JoinColumn
+    private Room room;
+
+    @ManyToOne
+    @JoinColumn
     private Booking booking;
+
+    @ManyToOne
+    @JoinColumn
+    private Account account;
 
     @Column
     private float rating;

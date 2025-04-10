@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.util.List;
+
 @Entity
 @Data
 @Table()
@@ -46,6 +48,9 @@ public class Account extends Time{
     @Column
     @Enumerated(EnumType.STRING)
     private StatusAc status;
+
+    @OneToMany(mappedBy = "account")
+    private List<Review> reviews;
 
     public enum Position {
         ADMIN, USER

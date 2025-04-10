@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.util.List;
+
 @Entity
 @Data
 @Table
@@ -41,4 +43,7 @@ public class Room extends Time{
     @Column
     @Enumerated(EnumType.STRING)
     private StatusOL status;
+
+    @OneToMany(mappedBy = "room")
+    private List<Review> reviews;
 }
