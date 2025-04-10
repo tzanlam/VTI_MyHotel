@@ -1,5 +1,6 @@
 package demo.hotel.modal.entity;
 
+import demo.hotel.modal.constant.StatusOL;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -36,4 +37,8 @@ public class Room extends Time{
 
     @Column
     private int priceNextHour;
+
+    @Column
+    @Enumerated(EnumType.STRING)
+    private StatusOL status;
 }
