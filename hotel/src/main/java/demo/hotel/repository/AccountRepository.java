@@ -14,4 +14,6 @@ import java.util.Optional;
 public interface AccountRepository extends JpaRepository<Account, Integer> {
     @Query("select a.reviews from Account a where a.id = :accountId")
     Optional<List<Review>> findReviewsByAccountId(@Param("accountId") int accountId);
+
+    Account findByEmail(String email);
 }
