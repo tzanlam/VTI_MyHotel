@@ -11,6 +11,7 @@ import java.util.Collection;
 public class AuthResponse {
     private String token;
     private int accountId;
-    private String email;
+    private String avatar;
+    private String fullName;
     private Collection<? extends GrantedAuthority> authorities;
 }

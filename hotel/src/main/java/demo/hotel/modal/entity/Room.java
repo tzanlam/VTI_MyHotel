@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -39,6 +40,9 @@ public class Room extends Time{
 
     @Column
     private int priceNextHour;
+
+    @Column
+    private LocalDate date;
 
     @Column
     @Enumerated(EnumType.STRING)

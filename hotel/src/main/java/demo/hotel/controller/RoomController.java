@@ -33,8 +33,17 @@ public class RoomController {
         }
     }
 
+    @GetMapping("/getRoomsByDate")
+    public ResponseEntity<?> findRoomByDate(@RequestParam ("startDate") String startDate, @RequestParam ("endDate") String endDate) {
+        try{
+            return ResponseEntity.ok(roomService.getRoomAvailableByDate(startDate, endDate));
+        }catch (Exception e){
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
     @PostMapping("/postRoom")
-    @PreAuthorize("hasAuthority('ADMIN')")
+//    @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<?> postRoom(@RequestBody RoomDTO dto) {
         try{
             return ResponseEntity.ok(roomService.createRoom(dto));
@@ -58,6 +67,15 @@ public class RoomController {
     public ResponseEntity<?> putQuantityRoom(@RequestParam("quantity")int quantity, @RequestParam("roomId") int roomId) {
         try{
             return ResponseEntity.ok(roomService.updateQuantity(roomId, quantity ));
+        }catch (Exception e){
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @PutMapping("putQuantityByDate")
+    public ResponseEntity<?> putQuantityByDate(@RequestParam("startDate") String startDate, @RequestParam("endDate") String endDate, @RequestParam("quantity")int quantity, @RequestParam("roomId") int roomId) {
+        try{
+            return ResponseEntity.ok(roomService.updateQuantityRoomByDate(roomId, quantity, startDate, endDate));
         }catch (Exception e){
             return ResponseEntity.badRequest().body(e.getMessage());
         }

@@ -24,6 +24,6 @@ public class UserDetailService implements UserDetailsService {
         if (account != null) {
             return new User(account.getEmail(), account.getPassword(), AuthorityUtils.createAuthorityList(account.getPosition().name()));
         }
-        return null;
+        throw new UsernameNotFoundException("User not found");
     }
 }

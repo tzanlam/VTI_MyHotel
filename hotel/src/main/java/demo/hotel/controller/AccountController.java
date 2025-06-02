@@ -4,10 +4,9 @@ import demo.hotel.modal.dto.AccountDTO;
 import demo.hotel.service.account.AccountService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
-@Repository
+@RestController
 @CrossOrigin("*")
 public class AccountController {
     private final AccountService accountService;

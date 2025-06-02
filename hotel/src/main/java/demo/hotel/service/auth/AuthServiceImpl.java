@@ -34,7 +34,7 @@ public class AuthServiceImpl implements AuthService {
             SecurityContextHolder.getContext().setAuthentication(authentication);
             UserDetails userDetails = userDetailsService.loadUserByUsername(account.getEmail());
             String token = jwtTokenUtil.generateToken(userDetails);
-            return new AuthResponse(token, account.getId(),email, userDetails.getAuthorities());
+            return new AuthResponse(token, account.getId(), account.getAvatar(), account.getFullName(), userDetails.getAuthorities());
         }else {
             throw new NullPointerException("Account not found");
         }
