@@ -1,0 +1,13 @@
+/* Menu khi được chọn */
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected {
+  color: #d48806 !important;
+  font-weight: bold;
+  border-bottom: none !important; /* Xoá gạch chân xanh */
+  background-color: transparent !important;
+}
+
+/* Menu khi hover */
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item:hover {
+  color: #fa8c16 !important;
+  border-bottom: none !important;
+}

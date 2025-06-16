@@ -1,0 +1,105 @@
+.auth-modal .ant-modal-content {
+  border-radius: 16px;
+  background-color: #fff8dc;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #d97706;
+}
+
+.custom-tabs .ant-tabs-tab {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.custom-tabs .ant-tabs-ink-bar {
+  background-color: #facc15;
+}
+
+.forgot-password {
+  text-align: right;
+  color: #d97706;
+  font-size: 13px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.forgot-password:hover {
+  color: #f59e0b;
+  text-decoration: underline;
+}
+
+.btn-login,
+.btn-register {
+  width: 100%;
+  border-radius: 9999px;
+  font-weight: 600;
+  background-color: #facc15;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover,
+.btn-register:hover {
+  background-color: #fbbf24;
+}
+
+/* === Input chung === */
+.ant-input,
+.ant-input-password input {
+  background-color: #fff9db !important;
+  border: 1px solid #d9d9d9;
+  transition: none;
+  box-shadow: none;
+  border-radius: 8px;
+}
+
+/* Khi hover */
+.ant-input:hover,
+.ant-input-password input:hover {
+  background-color: #fff9db !important;
+  border-color: #d9d9d9 !important;
+}
+
+/* Khi focus (bấm vào) */
+.ant-input:focus,
+.ant-input-password input:focus {
+  background-color: #fff9db !important;
+  border-color: #ffd666 !important;
+  box-shadow: 0 0 0 2px rgba(255, 215, 102, 0.3) !important;
+}
+
+/* Nền cho phần icon mắt */
+.ant-input-password .ant-input-suffix {
+  background-color: #fff9db !important;
+  border-radius: 0 8px 8px 0;
+  padding-right: 8px;
+}
+
+/* Fix viền xanh khi focus vào Password */
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused {
+  border-color: #ffd666 !important;
+  box-shadow: 0 0 0 2px rgba(255, 215, 102, 0.3) !important;
+  background-color: #fff9db !important;
+}
+
+/* Giữ nền vàng nhạt cố định */
+.ant-input-affix-wrapper,
+.ant-input-affix-wrapper:hover {
+  background-color: #fff9db !important;
+  border: 1px solid #d9d9d9 !important;
+  border-radius: 8px;
+  box-shadow: none !important;
+}
+
+/* Màu icon con mắt */
+.ant-input-password .anticon {
+  color: #999;
+}
