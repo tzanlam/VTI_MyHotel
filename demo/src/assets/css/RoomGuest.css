@@ -1,0 +1,73 @@
+.room-modal-container {
+  background-color: #fffbea;
+  padding: 24px;
+  border-radius: 12px;
+  min-height: 500px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.modal-title {
+  color: #b7791f;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.spinner-wrapper {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.no-room {
+  text-align: center;
+  padding: 80px 0;
+  color: #d97706;
+  font-size: 18px;
+}
+
+.room-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.room-image-wrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.room-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.room-description {
+  font-size: 15px;
+  color: #5c3d00;
+  line-height: 1.6;
+}
+
+.room-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  color: #4b3800;
+  font-size: 15px;
+}
+
+.button-wrapper {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.booking-button {
+  background-color: #facc15 !important;
+  border: none;
+  color: #5c3d00 !important;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px 24px;
+}
