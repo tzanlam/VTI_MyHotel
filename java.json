@@ -1,0 +1,7 @@
+{
+  "build": {
+    "type": "maven",
+    "goal": "clean package -DskipTests",
+    "root": "hotel"
+  }
+}
