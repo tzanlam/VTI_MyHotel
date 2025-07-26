@@ -1,5 +1,9 @@
 {
   "build": {
+    "jdk_version": "21",
+    "script": "mvn clean install",
+    "instances": "1",
+    "size": "XS",
     "type": "maven",
     "goal": "clean package -DskipTests",
     "root": "hotel"
